@@ -1,0 +1,40 @@
+.center {
+    text-align: center
+}
+
+.underline {
+    text-decoration: underline
+}
+
+.greenBG {
+    background-color: green;
+    text-align: center;
+    color: white;
+}
+
+.table1 {
+    width: 50%;
+    margin: auto
+}
+
+.table1 th {
+    background-color: green;
+    text-align: left;
+    font-weight: normal;
+    color: white;
+    height: 60px;
+}
+
+.table1 tr:nth-child(even) {
+    background: rgb(238, 238, 238);
+    height: 40px;
+}
+
+.table1 tr:nth-child(odd) {
+    background: #FFF;
+    height: 40px;
+}
+
+/* .table1 td {
+    max-width: 60px;
+} */

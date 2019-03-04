@@ -1,0 +1,66 @@
+.center {
+    text-align: center
+}
+
+.greenBG {
+    background-color: green;
+    text-align: center
+}
+
+.orangeBG {
+    background-color: orangered;
+    height: 200px;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.divInline {
+    display: inline;
+}
+
+.divHeight {
+    height: 400px;
+}
+
+.underline {
+    text-decoration: underline
+}
+
+.table1 {
+    width: 50%;
+    margin: auto
+}
+
+.table1 tr:nth-child(even) {
+    background: rgb(238, 238, 238)
+}
+
+.table1 tr:nth-child(odd) {
+    background: #FFF
+}
+
+.table2 {
+    margin: auto;
+    width: 50%;
+}
+
+.table2 tr:nth-child(even) {
+    background: rgb(238, 238, 238)
+}
+
+.table2 tr:nth-child(odd) {
+    background: #FFF
+}
+
+.table3 {
+    background-color: lightcyan
+}
+
+/* .div1 {background-color: white; } */
+
+.div1 {
+    background-color: white;
+    padding-top: 10%;
+    width: 500px;
+    height: 500px;
+}
