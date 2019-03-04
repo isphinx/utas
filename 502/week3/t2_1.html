@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("button").click(function () {
+                if (($("#name").val() == "")) {
+                    window.alert("This page says \r\nPlease enter your username");
+                } else if (($("#pw").val()) == "") {
+                    window.alert("This page says \r\nPlease enter your password");
+                }
+                else {
+                    windows.alert("Done");
+                }
+
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <p>Welcome!</p>
+    <br>
+
+    <form action="get">
+
+        <label for="">Username:</label>
+        <input id="name" name="name" type="text"><br>
+        <br>
+        <label for="">Password:</label>
+        <input id="pw" name="pw" type="text"><br>
+
+        <br>
+        <button>Submit</button>
+
+        <br><br>
+        <a>Don't you have account yet?</a>
+        <!-- <link rel="stylesheet" href="t2_0.html"> -->
+        <a href="t2_0.html">Sign up</a>
+
+    </form>
+
+
+</body>
+
+</html>

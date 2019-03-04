@@ -20,7 +20,7 @@ $dataCreater = "Today data";
     <?php 
     echo "Hello Wrold"."<br/>";
     echo "This is my first PHP code."."<br><br>";
-    echo "KIT502 will be super fun!"."<br><br>";
+    echo "KIT502 will be super fun!"."";
     echo "Date :".date('Y-m-d');
     ?>
 </body>

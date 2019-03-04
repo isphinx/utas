@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("button").click(function () {
+                if (($("#psw")) != ($("#cpsw"))) {
+                    window.alert("This page says\r\nPassword does not match");
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Create an Account</h1>
+    <p>It's free and always will be</p>
+
+    <form action="get">
+
+        <label for="">Username:</label><br>
+        <input type="text"><br><br>
+        <label for="">Password:</label><br>
+        <input id="psw" name="psw" type="text"><br><br>
+        <label for="">Confirm password:</label><br>
+        <input id="cpsw" name="cpsw" type="text"><br><br>
+        <label for="">Email:</label><br>
+        <input type="text"><br><br>
+        <label for="">Mobile:</label><br>
+        <input type="text"><br><br>
+
+        <label for="">Gender(optional):</label><br>
+        Male<input name="gender" type="radio">
+        Female<input name="gender" type="radio">
+        Other<input name="gender" type="radio">
+
+        <br><br>
+        <button>Submit</button>
+
+    </form>
+
+</body>
+
+</html>

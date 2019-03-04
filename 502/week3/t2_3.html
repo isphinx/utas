@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#b1").click(function () { $("#t1").hide(); $("#l1").html("Topic1 removed"); });
+            $("#b2").click(function () { $("#t2").hide(); $("#l1").html("Topic2 removed"); });
+            $("#b3").click(function () { $("#t3").hide(); $("#l1").html("Topic3 removed"); });
+            $("#b4").click(function () { $("#t4").hide(); $("#l1").html("Topic4 removed"); });
+
+            $("#refresh").click(function () {
+                $("#l1").html("Nothing removed");
+                $("#t1").show();
+                $("#t2").show();
+                $("#t3").show();
+                $("#t4").show();
+
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="c1.css">
+
+</head>
+
+<body>
+
+    <table>
+        <tr>
+            <td class="tableRedBorder">Action</td>
+            <td class="tableRedBorder">Top</td>
+        </tr>
+        <tr id="t1" name="t1">
+            <td class="tableRedBorder"><button id="b1" name="b1">remove</button></td>
+            <td class="tableRedBorder">Topic1</td>
+        </tr>
+        <tr id="t2" name="t2">
+            <td class="tableRedBorder"><button id="b2" name="b2">remove</button></td>
+            <td class="tableRedBorder">Topic2</td>
+        </tr>
+        <tr id="t3" name="t3">
+            <td class="tableRedBorder"><button id="b3" name="b3">remove</button></td>
+            <td class="tableRedBorder">Topic3</td>
+        </tr>
+        <tr id="t4" name="t4">
+            <td class="tableRedBorder"><button id="b4" name="b4">remove</button></td>
+            <td class="tableRedBorder">Topic4</td>
+        </tr>
+
+    </table>
+
+    <br>
+    <button id="refresh" name="refresh">refresh</button>
+
+    <br><br>
+    <label id="l1" name="l1" for="">Nothing removed</label>
+
+</body>
+
+</html>
