@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style type="text/css">
+        .inlineblock {
+            border: 2px solid red;
+            display: inline-block;
+            width: 18%;
+            height: 400px;
+        }
+
+        .outer {
+            border: 1px solid blue;
+            padding-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function imgswitch(num) {
+            var ck = "#ck" + num;
+            var imgs = "#img" + num;
+            if ($(ck).prop('checked') == true) {
+                $(imgs).show();
+            }
+            else {
+                $(imgs).hide();
+            }
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="outer">
+        <input type="checkbox" name="ck1" id="ck1" onclick="imgswitch(1)">Cat the beautiful
+        <input type="checkbox" name="ck2" id="ck2" onclick="imgswitch(2)">Lion the brave
+        <input type="checkbox" name="ck3" id="ck3" onclick="imgswitch(3)">Frog the King
+        <input type="checkbox" name="ck4" id="ck4" onclick="imgswitch(4)">Zebra the best
+        <input type="checkbox" name="ck5" id="ck5" onclick="imgswitch(5)">Pig the chubbie
+
+        <br><br>
+        <div style="font-size:0px">
+            <div class="inlineblock">
+                <img id="img1" name="img1" src="1.png" alt="" style="display:none">
+            </div>
+            <div class="inlineblock">
+                <img id="img2" name="img2" src="2.png" alt="" style="display:none">
+            </div>
+            <div class="inlineblock">
+                <img id="img3" name="img3" src="3.png" alt="" style="display:none">
+            </div>
+            <div class="inlineblock">
+                <img id="img4" name="img4" src="4.png" alt="" style="display:none">
+            </div>
+            <div class="inlineblock">
+                <img id="img5" name="img5" src="5.png" alt="" style="display:none">
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -3,19 +3,28 @@
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript">
-        $(document).ready(function () {
-            $("button").click(function () {
-                if (($("#name").val() == "")) {
-                    window.alert("This page says \r\nPlease enter your username");
-                } else if (($("#pw").val()) == "") {
-                    window.alert("This page says \r\nPlease enter your password");
-                }
-                else {
-                    windows.alert("Done");
-                }
+        // $(document).ready(function () {
+        //     $("button").click(function () {
+        //         if (($("#name").val() == "")) {
+        //             window.alert("This page says \r\nPlease enter your username");
+        //         } else if (($("#pw").val()) == "") {
+        //             window.alert("This page says \r\nPlease enter your password");
+        //         }
+        //         else {
+        //             windows.alert("Done");
+        //         }
 
-            });
-        });
+        //     });
+        // });
+        function validate() {
+            if (($("#name").val() == "")) {
+                window.alert("Please enter your username");
+                return false;
+            } else if (($("#password").val()) == "") {
+                window.alert("Please enter your password");
+                return false;
+            }
+        }
     </script>
 </head>
 
@@ -23,15 +32,14 @@
     <p>Welcome!</p>
     <br>
 
-    <form action="get">
+    <form action="" method="get" onsubmit="return validate();">
 
         <label for="">Username:</label>
         <input id="name" name="name" type="text"><br>
         <br>
         <label for="">Password:</label>
-        <input id="pw" name="pw" type="text"><br>
-
-        <br>
+        <input id="password" name="password" type="text">
+        <br><br>
         <button>Submit</button>
 
         <br><br>

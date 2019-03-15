@@ -3,13 +3,35 @@
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript">
-        $(document).ready(function () {
-            $("button").click(function () {
-                if (($("#psw")) != ($("#cpsw"))) {
-                    window.alert("This page says\r\nPassword does not match");
-                }
-            });
-        });
+        // $(document).ready(function () {
+        //     $("button").click(function () {
+        //         if (($("#psw")) != ($("#cpsw"))) {
+        //             window.alert("This page says\r\nPassword does not match");
+        //         }
+        //     });
+        // });
+        function validate() {
+            if ($("#name").val() == "") {
+                alert("Please enter your full name.");
+                return false;
+            } else if ($("#password").val() == "") {
+                alert("Please enter your password.");
+                return false;
+            } else if ($("#confirm_password").val() == "") {
+                alert("Plase re-type the password.");
+                return false;
+            } else if ($("password").val() != $("#confirm_password").val()) {
+                alert("Password does not match.");
+                alert($("password").val() + "   " + $("#confirm_password").val());
+                return false;
+            } else if ($("#email").val() == "") {
+                alert("Please enter your email address.");
+                return false;
+            } else if ($("#mobile").val() == "") {
+                alert("Please enter your mobile number.");
+                return false;
+            }
+        }
     </script>
 </head>
 
@@ -17,18 +39,18 @@
     <h1>Create an Account</h1>
     <p>It's free and always will be</p>
 
-    <form action="get">
+    <form method="GET" action="" onsubmit="return validate();">
 
         <label for="">Username:</label><br>
-        <input type="text"><br><br>
+        <input id="name" name="name" type="text"><br><br>
         <label for="">Password:</label><br>
-        <input id="psw" name="psw" type="text"><br><br>
+        <input id="password" name="password" type="text"><br><br>
         <label for="">Confirm password:</label><br>
-        <input id="cpsw" name="cpsw" type="text"><br><br>
+        <input id="confirm_password" name="confirm_password" type="text"><br><br>
         <label for="">Email:</label><br>
-        <input type="text"><br><br>
+        <input id="email" name="email" type="text"><br><br>
         <label for="">Mobile:</label><br>
-        <input type="text"><br><br>
+        <input id="mobile" name="mobile" type="text"><br><br>
 
         <label for="">Gender(optional):</label><br>
         Male<input name="gender" type="radio">
