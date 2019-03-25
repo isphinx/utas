@@ -5,37 +5,30 @@
     <link rel="stylesheet" href="c1.css">
 
     <script type="text/javascript">
-        $(document).ready(function () {
-            $("#l1").click(function () { $("#l1").hide("slow"); $("#lb").html("Item 1 removed"); });
-            $("#l2").click(function () { $("#l2").hide("slow"); $("#lb").html("Item 2 removed"); });
-            $("#l3").click(function () { $("#l3").hide("slow"); $("#lb").html("Item 3 removed"); });
-            $("#l4").click(function () { $("#l4").hide("slow"); $("#lb").html("Item 4 removed"); });
-            $("#l5").click(function () { $("#l5").hide("slow"); $("#lb").html("Item 5 removed"); });
-
-            $("#refresh").click(function () {
-                $("#lb").html("Nothing removed");
-                $("#l1").show();
-                $("#l2").show();
-                $("#l3").show();
-                $("#l4").show();
-                $("#l5").show();
-
-            });
-        });
+        function swithhide(num) {
+            var name = "#l" + num;
+            $(name).hide("slow"); $("#lb").html("Item" + num + "removed");
+        }
+        function showall() {
+            $("#lb").html("Nothing removed");
+            for (var i = 1; i < 6; i++) {
+                $("#l" + i).show();
+            }
+        }
     </script>
 </head>
 
 <body>
     <ul>
-        <li id="l1" name="l1">Item 1</li>
-        <li id="l2" name="l2">Item 2</li>
-        <li id="l3" name="l3">Item 3</li>
-        <li id="l4" name="l4">Item 4</li>
-        <li id="l5" name="l5">Item 5</li>
+        <li id="l1" name="l1" onclick="return swithhide(1)">Item 1</li>
+        <li id="l2" name="l2" onclick="return swithhide(2)">Item 2</li>
+        <li id="l3" name="l3" onclick="return swithhide(3)">Item 3</li>
+        <li id="l4" name="l4" onclick="return swithhide(4)">Item 4</li>
+        <li id="l5" name="l5" onclick="return swithhide(5)">Item 5</li>
     </ul>
 
     <br>
-    <button id="refresh" name="refresh">refresh</button>
+    <button id="refresh" name="refresh" onclick="return showall();">refresh</button>
 
     <br><br>
     <label id="lb" name="lb" for="">Nothing removed</label>
