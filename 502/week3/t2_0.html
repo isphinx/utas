@@ -20,8 +20,8 @@
             } else if ($("#confirm_password").val() == "") {
                 alert("Plase re-type the password.");
                 return false;
-            } else if ($("password").val() != $("#confirm_password").val()) {
-                alert("Password does not match.");
+            } else if ($("#password").val() != $("#confirm_password").val()) {
+                alert("Password does not match." + $("#password").val() + $("#confirm_password").val());
                 alert($("password").val() + "   " + $("#confirm_password").val());
                 return false;
             } else if ($("#email").val() == "") {
@@ -39,7 +39,7 @@
     <h1>Create an Account</h1>
     <p>It's free and always will be</p>
 
-    <form method="GET" action="" onsubmit="return validate();">
+    <form method="GET" action="www.baidu.com" onsubmit="return validate();">
 
         <label for="">Username:</label><br>
         <input id="name" name="name" type="text"><br><br>

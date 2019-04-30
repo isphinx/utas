@@ -2,6 +2,7 @@
 //put the comment
 $author = "lucas";
 $dataCreater = "4 March 2019";
+// phpinfo();
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,12 +18,12 @@ $dataCreater = "4 March 2019";
         <li>Data updated:<?php echo $dataCreater; ?></li>
     </ul>
 
-    <?php 
-    echo "Hello Wrold"."<br/>";
-    echo "This is my first PHP code."."<br><br>";
-    echo "KIT502 will be super fun!"."<br><br>";
-    echo "Date :".date('Y-m-d');
-    ?>
+    <?php
+echo "Hello Wrold" . "<br/>";
+echo "This is my first PHP code." . "<br><br>";
+echo "KIT502 will be super fun!" . "<br><br>";
+echo "Date :" . date('Y-m-d');
+?>
 </body>
 
 </html>
