@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Self Study 11-2</title>
+   <script src="http://code.jquery.com/jquery-latest.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function() {
+     	
+     	// make button not submit a form (if type is not submit)
+     	$('button[type!=submit]').click(function(){
+        	// code to cancel changes
+        	return false;
+    	});
+
+	    // when user clicks the check button id='check', execute the following function
+	    $("#check").click( function () {
+	      	
+	      		// get the value of username field and assign as username.
+	     		var username = $("#username").val();
+	      		
+	      		// send the data 'username' as username to checker.php and execute the following function (if the data sending is successful)
+	      		$.get( "checker.php", { username: username} )
+				  .done(function( data ) {
+				  		// print the data (output of checker.php) as a label for 'username' id='output'
+					    $("#output").html(data);
+				});     	
+	    });       
+     });
+   </script>
+</head>
+
+<body>
+   <h3>Self Study 11-2</h3>
+   <form method="post" action="">	
+		Username:<input type="text" id="username" name="username"/>
+		<button id="check">Check</button>
+		<label id="output" for="username"></label><br/>		
+		Password:<input type="password" name="password"/><br/>
+		
+		<input type="submit" name="submit" value="Sign Up"/>		
+	</form>
+	</body>
+</html>

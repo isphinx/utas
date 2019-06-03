@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Self Study 11-1</title>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script type="text/javascript">
+      function setup_country_change(){
+         //check whether country section is changed.
+         $('#country').change(update_cities);
+      }
+      
+      function update_cities(){
+         //assigns the selected country to country variable.
+         var country = $('#country').val();
+         
+         //get_cities.php performs when the country is selected.
+         //call the function(show_cities) when the data is returned from get_cities.php.
+         $.get('get_cities.php?country='+country,show_cities);
+      }
+      
+      function show_cities(cities){
+         //returned data from get_cities.php is assigned to cities
+	     //change the field(drop down list)
+         $('#cities').html(cities);
+      }
+   
+      //When the page is loaded, function (setup_country_change())is called.
+      $(document).ready(setup_country_change);
+   
+   </script>
+</head>
+
+<body>
+   <h3>Self Study 11-1</h3>
+   <form id="select_country" name="select_country" method="" action="#">
+      <table>
+         <tr>
+            <th>Country: </th>
+            <td>
+               <select name="country" id="country">
+                  <option value="" selected="selected">Please Select Country</option>
+                  <option value="au">Australia</option>
+                  <option value="cn">China</option>
+                  <option value="uk">United Kingdom</option>                  
+                  <option value="us">United States</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <th>Cities: </th>
+            <td id="cities">Please Select Country First</td>
+         </tr>
+      </table>
+   </form>
+</body>
+</html>

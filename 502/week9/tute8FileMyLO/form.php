@@ -32,6 +32,7 @@ if (isset($_POST['submit'])) {
         //if the password does not include any uppercase letter
         $error .= "* Password must include at least one uppercase letter!<br>";
     }
+} elseif (!preg_match("#[~!@#]+#", $password)) {
 
     //email validation
     if ($email == "") {

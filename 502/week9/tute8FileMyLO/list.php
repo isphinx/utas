@@ -72,7 +72,6 @@ while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
         </tr>
     </table>
     <?php
-
 }
 ?>
 </body>
