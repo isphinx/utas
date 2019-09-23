@@ -16,8 +16,11 @@ do
 	echo 
 	if [ "$select" = "1" ]; then
 		while read -p "Enter setting (format: ABCD=abcd): " line; do
-			if [[ ! $line == *=* ]]; then
-				echo "Invalid setting\n"
+			if [ "$line" = "" ]; then
+				echo -e "New setting not entered\n"
+				continue
+			elif [[ ! $line == *=* ]]; then
+				echo -e "Invalid setting\n"
 				continue
 			fi
 			name=${line%=*}
@@ -26,18 +29,18 @@ do
 			echo "The variable value of the setting is: $value"
 
 			if [ "$value" = "" -o "$name" = "" ]; then
-				echo "Invalid setting.\n"
+				echo -e "Invalid setting\n"
 				continue
 			fi
 
 			if [[ "$name" =~ (^[0-9].*) ]]; then
-				echo "Invalid setting. The first character of a variable name cannot be a digit.\n"
+				echo -e "Invalid setting. The first character of a variable name cannot be a digit.\n"
 				continue
 			fi
 
 			search=$(grep -E ^$name"=" config.txt)
 			if [ ! "$search" = "" ]; then
-				echo "Variable exists. Changing the values of existing variables is not allowed.\n"
+				echo -e "Variable exists. Changing the values of existing variables is not allowed.\n"
 				continue
 			fi
 
@@ -49,13 +52,13 @@ do
 		read -p "Enter setting: " line
 		search=$(grep -E ^$line"=" config.txt)
 		if [ "$search" = "" ]; then
-			echo "Variable does not exist.\n"
+			echo -e "Variable does not exist.\n"
 		else
 			echo $search
 			read -p "Delete this setting (y/n)? " -n 1 line
 			echo
 			if [ "$line" = "y" ]; then
-				echo "Setting deleted\n"
+				echo -e "Setting deleted\n"
 				sed -e "/"$search"/d" config.txt>config.txt1
 				mv config.txt1 config.txt
 
@@ -65,10 +68,10 @@ do
 		read -p "Enter setting: " line
 		search=$(grep -E ^$line"=" config.txt)
 		if [ "$search" = "" ]; then
-			echo "Variable does not exist.\n"
+			echo -e "Variable does not exist.\n"
 		else
 			echo $search
-			echo "Requested setting displayed above.\n"
+			echo -e "Requested setting displayed above.\n"
 		fi
 	elif [ "$select" = "4" ]; then
 		cat config.txt
@@ -76,6 +79,6 @@ do
 	elif [ "$select" = "q" -o "$select" = "Q" ]; then
 		break
 	else
-		echo
+		echo -e "Invalid choice.\n";
 	fi
 done
