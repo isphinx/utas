@@ -1,5 +1,8 @@
-#!/bin/sh
+#!/bin/sh 
+# Xin Li(xli65 - 501186)
+# introduction: editing config.txt
 
+# function of dispaly the menu of options
 displayMenu(){
 	echo "*** MENU ***"
 	echo "1. Add a Setting"
@@ -9,11 +12,17 @@ displayMenu(){
 	echo "Q – Quit"
 }
 
-touch config.txt
+if [ ! -f "config.txt" ]; then
+	echo "the file config.txt is not exist!"
+	exit 1
+fi
 
+# touch config.txt
+# display menu and then let user to edit config.txt
 while displayMenu && read -p "CHOICE:" -e -n 1 select
 do
 	echo 
+	# add a setting to config.txt
 	if [ "$select" = "1" ]; then
 		while read -p "Enter setting (format: ABCD=abcd): " line; do
 			if [ "$line" = "" ]; then
@@ -48,6 +57,7 @@ do
 			echo -e "\nNew setting added.\n"
 			break
 		done
+	# delete a setting to config.txt
 	elif [ "$select" = "2" ]; then
 		read -p "Enter setting: " line
 		search=$(grep -E ^$line"=" config.txt)
@@ -59,11 +69,11 @@ do
 			echo
 			if [ "$line" = "y" ]; then
 				echo -e "Setting deleted\n"
-				sed -e "/"$search"/d" config.txt>config.txt1
-				mv config.txt1 config.txt
-
+				sed -e "/"$search"/d" config.txt>config.txt.tmp
+				mv config.txt.tmp config.txt
 			fi
 		fi
+	# view a setting to config.txt
 	elif [ "$select" = "3" ]; then
 		read -p "Enter setting: " line
 		search=$(grep -E ^$line"=" config.txt)
@@ -73,11 +83,15 @@ do
 			echo $search
 			echo -e "Requested setting displayed above.\n"
 		fi
+	# display all settings to config.txt
 	elif [ "$select" = "4" ]; then
 		cat config.txt
 		echo
+	# quit application
 	elif [ "$select" = "q" -o "$select" = "Q" ]; then
 		break
+
+	# invalid option
 	else
 		echo -e "Invalid choice.\n";
 	fi
