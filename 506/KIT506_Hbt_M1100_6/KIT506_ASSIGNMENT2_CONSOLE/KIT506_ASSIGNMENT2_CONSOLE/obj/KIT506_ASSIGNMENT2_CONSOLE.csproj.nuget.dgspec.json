@@ -1,0 +1,59 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\506\\assignment2\\KIT506_ASSIGNMENT2_CONSOLE\\KIT506_ASSIGNMENT2_CONSOLE\\KIT506_ASSIGNMENT2_CONSOLE.csproj": {}
+  },
+  "projects": {
+    "C:\\506\\assignment2\\KIT506_ASSIGNMENT2_CONSOLE\\KIT506_ASSIGNMENT2_CONSOLE\\KIT506_ASSIGNMENT2_CONSOLE.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\506\\assignment2\\KIT506_ASSIGNMENT2_CONSOLE\\KIT506_ASSIGNMENT2_CONSOLE\\KIT506_ASSIGNMENT2_CONSOLE.csproj",
+        "projectName": "KIT506_ASSIGNMENT2_CONSOLE",
+        "projectPath": "C:\\506\\assignment2\\KIT506_ASSIGNMENT2_CONSOLE\\KIT506_ASSIGNMENT2_CONSOLE\\KIT506_ASSIGNMENT2_CONSOLE.csproj",
+        "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
+        "outputPath": "C:\\506\\assignment2\\KIT506_ASSIGNMENT2_CONSOLE\\KIT506_ASSIGNMENT2_CONSOLE\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

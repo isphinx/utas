@@ -1,27 +1,28 @@
-#!/bin/sh 
+#!/bin/sh
 # Xin Li(xli65 - 501186)
 # introduction: editing config.txt
 
 # function of dispaly the menu of options
-displayMenu(){
+displayMenu() {
 	echo "*** MENU ***"
 	echo "1. Add a Setting"
 	echo "2. Delete a Setting"
 	echo "3. View a Setting"
 	echo "4. View All Settings"
 	echo "Q – Quit"
+	echo
 }
 
+# check if config.txt exist
 if [ ! -f "config.txt" ]; then
+	# cant found config.txt and then exit program
 	echo "the file config.txt is not exist!"
 	exit 1
 fi
 
 # touch config.txt
 # display menu and then let user to edit config.txt
-while displayMenu && read -p "CHOICE:" -e -n 1 select
-do
-	echo 
+while displayMenu && read -p "CHOICE:" -e -n 1 select; do
 	# add a setting to config.txt
 	if [ "$select" = "1" ]; then
 		while read -p "Enter setting (format: ABCD=abcd): " line; do
@@ -47,13 +48,13 @@ do
 				continue
 			fi
 
-			search=$(grep -E ^$name"=" config.txt)
+			search=$(grep -E "^"$name"=" config.txt)
 			if [ ! "$search" = "" ]; then
 				echo -e "Variable exists. Changing the values of existing variables is not allowed.\n"
 				continue
 			fi
 
-			echo "$line">>config.txt
+			echo "$line" >>config.txt
 			echo -e "\nNew setting added.\n"
 			break
 		done
@@ -67,11 +68,14 @@ do
 			echo $search
 			read -p "Delete this setting (y/n)? " -n 1 line
 			echo
-			if [ "$line" = "y" ]; then
+			case $line in
+			Y | y)
 				echo -e "Setting deleted\n"
-				sed -e "/"$search"/d" config.txt>config.txt.tmp
+				sed -e "/^"$search"/d" config.txt >config.txt.tmp
 				mv config.txt.tmp config.txt
-			fi
+				;;
+			*) echo ;;
+			esac
 		fi
 	# view a setting to config.txt
 	elif [ "$select" = "3" ]; then
@@ -93,6 +97,6 @@ do
 
 	# invalid option
 	else
-		echo -e "Invalid choice.\n";
+		echo -e "Invalid choice.\n"
 	fi
 done

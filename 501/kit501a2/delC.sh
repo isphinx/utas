@@ -33,12 +33,13 @@ do
 
 		echo
 		read -p "Delete file $file? (y/n):" -e -n 1 input
-		if [ "$input" = "y" ]; then
-			echo -e "File $file deleted.\n"
-			rm $file # delete file
-		else
-			echo -e "File $file NOT deleted.\n"
-		fi
+		case $input in
+			Y|y)
+				echo -e "File $file deleted.\n"
+				rm $file # delete file
+				;;
+			*) echo -e "File $file NOT deleted.\n" ;;
+		esac
 	else
 		echo -e "File $file is not exist.\n"
 	fi
