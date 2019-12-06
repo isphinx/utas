@@ -26,6 +26,7 @@ def butter_bandpass(lowcut, highcut, fs, order=5):
     nyq = 0.5 * fs
     low = lowcut / nyq
     high = highcut / nyq
+    print(low, high, order)
     b, a = butter(order, [low, high], btype='band')
     return b, a
 
@@ -40,10 +41,10 @@ def bandpassFilter(path, file):
     print(file)
     x, sr = librosa.load(path+'/'+file, sr=None)
 
-    fs = 5000.0
-    lowcut = 500.0
-    highcut = 1250.0
-    y = butter_bandpass_filter(x, lowcut, highcut, fs, order=6)
+    fs = 1000.0
+    lowcut = 1000.0
+    highcut = 12500.0
+    y = butter_bandpass_filter(x, lowcut, sr*2/5, sr, order=6)
     return x, y, sr
 
 
@@ -70,7 +71,7 @@ def process(newFolder, path, file):
 
     newfile = "{0}{1}_bpf.wav".format(newFolder, waveID)
     print('output:' + path + newfile)
-    # librosa.output.write_wav(newfile, y, sr)
+    librosa.output.write_wav(newfile, y, sr)
     cutWave(newFolder, waveID, y, sr)
 
 
@@ -98,7 +99,7 @@ if __name__ == "__main__":
 
     if len(sys.argv) == 2:
         path = sys.argv[1]
-        newFolder = 'output/{0}'.format(outputPaht)
+        newFolder = 'output/{0}'.format(path)
     else:
         path = '.'
         newFolder = 'output/'
