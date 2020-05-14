@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">KIT305 ConstraintLayout App</string>
+    <string-array name="list_items">
+        <item>Homer</item>
+        <item>Marge</item>
+        <item>Bart</item>
+        <item>Lisa</item>
+        <item>Maggie</item>
+    </string-array>
+    <string-array name="dropdownItems">
+        <item>One Tequila</item>
+        <item>Two Tequila</item>
+        <item>Three Tequila</item>
+        <item>Floor</item>
+    </string-array>
+</resources>
