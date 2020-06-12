@@ -17,8 +17,8 @@ class MovieUITableViewController: UITableViewController {
         let  database : SQLiteDatabase = SQLiteDatabase(databaseName: "MyDatabase")
         print(database.selectMovieBy(id:   1) ??  "Movie not found")
         
-        //database.insert(movie:Movie(name:"Lord of the Rings", year:2003, director:"Peter Jackson"))
-        //database.insert(movie:Movie(name:"The Matrix", year:1999, director:"Lana Wachowski, Lilly Wachowski"))
+//        database.insert(movie:Movie(name:"Lord of the Rings", year:2003, director:"Peter Jackson"))
+//        database.insert(movie:Movie(name:"The Matrix", year:1999, director:"Lana Wachowski, Lilly Wachowski"))
         movies = database.selectAllMovies()
 
         // Uncomment the following line to preserve selection between presentations

@@ -17,8 +17,8 @@ class ViewController: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //database.insert(movie:Movie(name:"Lord of the Rings", year:2003, director:"Peter Jackson"))
-        //database.insert(movie:Movie(name:"The Matrix", year:1999, director:"Lana Wachowski, Lilly Wachowski"))
+//        database.insert(movie:Movie(name:"Lord of the Rings", year:2003, director:"Peter Jackson"))
+//        database.insert(movie:Movie(name:"The Matrix", year:1999, director:"Lana Wachowski, Lilly Wachowski"))
         //print(database.selectAllMovies())
         print(database.selectMovieBy(id:   1) ??  "Movie not found")
         

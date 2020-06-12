@@ -26,7 +26,7 @@ class SQLiteDatabase
      
         WARNING: DOING THIS WILL WIPE YOUR DATA, unless you modify how updateDatabase() works.
      */
-    private let DATABASE_VERSION = 1
+    private let DATABASE_VERSION = 2
     
     
     
@@ -349,7 +349,7 @@ class SQLiteDatabase
                 year: sqlite3_column_int(row, 2),
                 director: String(cString:sqlite3_column_text(row, 3))
             )
-        })
+        } )
             
         return result
     }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A0307F502462F33100AA34F7 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0307F4E2462F33100AA34F7 /* CollectionViewCell.swift */; };
+		A0307F512462F33100AA34F7 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0307F4F2462F33100AA34F7 /* CollectionViewCell.xib */; };
 		A0950D8124288CBA00BE9873 /* Moive.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0950D8024288CBA00BE9873 /* Moive.swift */; };
 		A0950D832428982E00BE9873 /* MovieUITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0950D822428982E00BE9873 /* MovieUITableViewCell.swift */; };
 		A0950D8724289B7600BE9873 /* MovieUITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0950D8624289B7600BE9873 /* MovieUITableViewController.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A0307F4E2462F33100AA34F7 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		A0307F4F2462F33100AA34F7 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		A0950D8024288CBA00BE9873 /* Moive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moive.swift; sourceTree = "<group>"; };
 		A0950D822428982E00BE9873 /* MovieUITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieUITableViewCell.swift; sourceTree = "<group>"; };
 		A0950D8624289B7600BE9873 /* MovieUITableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieUITableViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +79,8 @@
 				A0950D8624289B7600BE9873 /* MovieUITableViewController.swift */,
 				D3290765221FAC8500D31C68 /* SQLiteDatabase.swift */,
 				D3290755221FAC6800D31C68 /* ViewController.swift */,
+				A0307F4E2462F33100AA34F7 /* CollectionViewCell.swift */,
+				A0307F4F2462F33100AA34F7 /* CollectionViewCell.xib */,
 			);
 			path = Tutorial5;
 			sourceTree = "<group>";
@@ -140,6 +146,7 @@
 			files = (
 				D329075E221FAC6800D31C68 /* LaunchScreen.storyboard in Resources */,
 				D329075B221FAC6800D31C68 /* Assets.xcassets in Resources */,
+				A0307F512462F33100AA34F7 /* CollectionViewCell.xib in Resources */,
 				D3290759221FAC6800D31C68 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -153,6 +160,7 @@
 			files = (
 				A0950D8724289B7600BE9873 /* MovieUITableViewController.swift in Sources */,
 				D3290756221FAC6800D31C68 /* ViewController.swift in Sources */,
+				A0307F502462F33100AA34F7 /* CollectionViewCell.swift in Sources */,
 				D3290754221FAC6800D31C68 /* AppDelegate.swift in Sources */,
 				A0950D8124288CBA00BE9873 /* Moive.swift in Sources */,
 				A0950D832428982E00BE9873 /* MovieUITableViewCell.swift in Sources */,
@@ -304,6 +312,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 892DZ3A58K;
 				INFOPLIST_FILE = Tutorial5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -321,6 +330,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZLPGV47PJ2;
 				INFOPLIST_FILE = Tutorial5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
