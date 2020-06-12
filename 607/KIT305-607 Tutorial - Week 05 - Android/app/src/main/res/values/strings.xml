@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">SQLite</string>
+
+    <string-array name="list_items">
+        <item>Homer</item>
+        <item>Marge</item>
+        <item>Bart</item>
+        <item>Lisa</item>
+        <item>Maggie</item>
+    </string-array>
+</resources>
